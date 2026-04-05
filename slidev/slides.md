@@ -1,26 +1,18 @@
 ---
 theme: default
 background: '#000000'
-class: 'text-white'
+class: text-center
 highlighter: shiki
 lineNumbers: true
-info: |
-  Claude Code를 활용한 예측 가능한 바이브 코딩 전략 발표 자료
+title: 사제동행세미나 발표
 drawings:
   enabled: true
 layout: center
 ---
 
-# <span class="text-blue-400">조금 더 똑똑하게 바이브코딩하기</span>
+<h1 class="text-6xl font-bold">조금 더 똑똑하게 바이브코딩하기</h1>
 
-LLM의 한계를 시스템으로 보완하여 개발 주도권 잡기
-
-<div class="pt-12">
-  <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer hover:bg-white hover:bg-opacity-10 text-white">
-    발표 시작 <carbon:arrow-right class="inline"/>
-  </span>
-</div>
-
+#### 20203040 김성호
 ---
 layout: default
 ---
@@ -30,7 +22,7 @@ layout: default
 "분위기에 맡기는 코딩, 그 실체는?"
 
 - **극단적 정의**: "코드를 읽지 마라, 완전히 바이브에 맡기고 'Accept All'을 눌러라." (Andrej Karpathy)
-- **실무적 접근**: "자연어로 의도를 전달하고 에이전트가 코드를 생성하되, 개발자는 결과를 검증하고 방향을 조정하는 방식"
+- **실무적 접근**: "자연어로 의도를 전달하고 에이전트가 코드를 생성하되, <br> 개발자는 결과를 검증하고 방향을 조정하는 방식"
 
 <div class="mt-16 grid grid-cols-2 gap-4 text-center">
   <div class="bg-gray-900 text-white p-6 rounded shadow-lg border border-gray-800">
@@ -52,9 +44,9 @@ layout: default
 LLM이 가진 4가지 인지적/구조적 한계
 
 1. **Lost in the Middle**: 문서가 길어질수록 중간에 위치한 중요 요구사항을 놓침.
-2. **작업 기억(Working Memory)의 부재**: 복잡한 다중 지시사항을 잠시 저장하고 하나씩 꺼내 쓰는 '임시 공간'이 없음.
-3. **오류 누적(Snowballing)**: 자기회귀(Autoregressive) 특성상 초반의 작은 오해나 자의적 해석이 전체 시스템의 치명적 오류로 확산됨.
-4. **학습 데이터 편향**: 대화가 길어질수록 최신 컨벤션보다 과거에 많이 학습된 패턴(예: Redux)으로 회귀함.
+2. **Working Memory의 부재**: 복잡한 다중 지시사항을 잠시 저장하고 하나씩 꺼내 쓰는 '임시 공간'이 없음.
+3. **오류의 누적**: Autoregressive 특성상 초반의 작은 오해나 자의적 해석이 전체 시스템의 치명적 오류로 확산됨.
+4. **학습 데이터 편향**: 대화가 길어질수록 최신 컨벤션보다 과거에 많이 학습된 패턴으로 회귀함.
 
 <p class="mt-8 text-lg text-blue-400 font-bold border-l-4 border-blue-500 pl-4">
 해결책 💡 인간이 메모하고 분업하듯, LLM에게도 '시스템적 작업 공간'을 주어야 한다.
@@ -66,19 +58,20 @@ layout: default
 
 # 에이전트를 통제하는 3가지 카테고리
 
-<div class="flex flex-col gap-4 mt-12 px-16">
-  <div class="bg-gradient-to-br from-blue-900 to-blue-800 text-white p-6 rounded-lg shadow-xl border border-blue-700">
-    <h3 class="text-blue-300 text-xl font-bold mb-2">실행 제어 및 시각화</h3>
-    <p class="text-gray-200">행동을 통제하라</p>
-  </div>
-  <div class="bg-gradient-to-br from-green-900 to-green-800 text-white p-6 rounded-lg shadow-xl border border-green-700">
-    <h3 class="text-green-300 text-xl font-bold mb-2">인지 능력 및 컨텍스트 분산</h3>
-    <p class="text-gray-200">복잡도를 나누어라</p>
-  </div>
-  <div class="bg-gradient-to-br from-yellow-900 to-yellow-800 text-white p-6 rounded-lg shadow-xl border border-yellow-700">
-    <h3 class="text-yellow-300 text-xl font-bold mb-2">기억 관리 및 규칙 자산화</h3>
-    <p class="text-gray-200">망각을 방지하라</p>
-  </div>
+
+<div class="bg-gradient-to-br from-blue-900 to-blue-800 text-white p-6 rounded-lg shadow-xl border border-blue-700">
+  <h3 class="text-blue-300 text-xl font-bold mb-2">실행 제어 및 시각화</h3>
+  <p class="text-gray-200">행동을 통제하라</p>
+</div>
+
+<div class="bg-gradient-to-br from-green-900 to-green-800 text-white p-6 rounded-lg shadow-xl border border-green-700">
+  <h3 class="text-green-300 text-xl font-bold mb-2">인지 능력 및 컨텍스트 분산</h3>
+  <p class="text-gray-200">복잡도를 나누어라</p>
+</div>
+
+<div class="bg-gradient-to-br from-yellow-900 to-yellow-800 text-white p-6 rounded-lg shadow-xl border border-yellow-700">
+  <h3 class="text-yellow-300 text-xl font-bold mb-2">기억 관리 및 규칙 자산화</h3>
+  <p class="text-gray-200">망각을 방지하라</p>
 </div>
 
 ---
@@ -177,17 +170,12 @@ class: text-center
 layout: center
 ---
 
-# 요약 및 결론
+## **에이전트는 만능이 아닙니다.**
+## **우리의 인지 구조를 닮아 편향과 한계가 있습니다.**
 
-**에이전트는 만능이 아닙니다. 우리의 인지 구조를 닮아 편향과 한계가 있습니다.**
-
-1. <span class="text-blue-400">쪼개고 통제하십시오.</span> (멀티턴, Plan, Todo)
-2. <span class="text-green-400">역할을 나누고 깊게 생각하게 하십시오.</span> (서브에이전트, Thinking)
-3. <span class="text-yellow-400">규칙을 시스템화하고 다이어트 하십시오.</span> (CLAUDE.md, Skill, Compact)
-
-<div class="mt-12 text-2xl font-bold border-t border-gray-700 pt-6 text-white">
-시스템으로 한계를 보완하는 개발자만이 <br> 안전하게 '바이브(Vibe)'에 올라탈 수 있습니다.
-</div>
+1. <span class="text-blue-400">쪼개고 통제하십시오.</span>
+2. <span class="text-green-400">역할을 나누고 깊게 생각하게 하십시오.</span> 
+3. <span class="text-yellow-400">규칙을 시스템화하고 다이어트 하십시오.</span>
 
 ---
 layout: center
